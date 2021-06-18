@@ -1,28 +1,24 @@
 public class BankAccount {
-    private int money;
-    private int accountBalance() {return 0;}
-
-    private int accountBalance(int money){
-        this.money = money;
-        return accountBalance(money);
+    private int accountBalance;
+    private BankAccount() {
+        accountBalance = 0;
     }
-
+    private BankAccount(int accountBalance){
+        this.accountBalance = accountBalance;
+    }
     public boolean withdraw (int amount) {
-        if (amount > accountBalance()) {
+        if (amount > accountBalance) {
             return false;
         }
         else {
-            money -= amount;
+            accountBalance -= amount;
             return true;
         }
     }
-
     public void transfer(int amount) {
-        money += amount;
+        accountBalance += amount;
     }
-
     public int getAccountBalance() {
-        return accountBalance();
+        return accountBalance;
     }
-
 }
