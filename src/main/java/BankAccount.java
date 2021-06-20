@@ -1,9 +1,9 @@
 public class BankAccount {
-    private int accountBalance;
-    private BankAccount() {
+    public int accountBalance;
+    public BankAccount() {
         accountBalance = 0;
     }
-    private BankAccount(int accountBalance){
+    public BankAccount(int accountBalance){
         this.accountBalance = accountBalance;
     }
     public boolean withdraw (int amount) {
